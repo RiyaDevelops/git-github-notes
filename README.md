@@ -140,7 +140,7 @@ git status
 git status --short
 
 #Short Status flags are: 
-    # ?? - Untracked (U), not addded to the repository
+    # ?? - Untracked (U), These are files that are present in your project directory but haven't been added to the Git repository.
     # A - File are added to stage 
     # M - Modified
     # D - Deleted files 
@@ -158,7 +158,55 @@ git add file_name
 
  git add -all
 ```
+#### Notes 
+ - **Untracked Files:**
+    -  These are files that are present in your project directory but haven't been added to the Git repository.
+     - Git doesn't recognize these files and doesn't track changes in them.
+    - They won't be included in commits until you explicitly add them to the staging area.
 
+-   **Modified  Files:**
+    -  These are files that have been changed since the last commit.directory but haven't been added to the Git repository.
+     - Git recognizes these files as part of the repository and tracks the changes made to them.
+    - They're in the working directory and are marked as modified because they've been edited **but not staged for a commit.**
+
+
+-   **Added Files:**
+    -  These are files that have been modified and then explicitly added to the staging area (using ```git add```).
+     - Git recognizes these files as part of the repository and tracks the changes made to them.
+    - They're in the working directory and are marked as modified because they've been edited **but not staged for a commit.**
+ 
+
+13. ### Committing our fILES 
+- moving from staging to commiting files
+- Adding commits keeps track of our progress and changes, as we work 
+- In Git each commit is seen as a snaphot of our project. We can use these snapshots to revert to earlier versions when we need to. 
+
+```bash
+git commit -m "message"
+ ```
+
+13. ### Commit Log 
+
+```bash
+#git log allows us to the lidt of all commitd made ina  respository (foldrer for project)
+
+git log
+  ```
+
+14. #### Getting Help 
+```bash 
+#git help gives us a list of common Git commands used in various situations:
+git help
+
+#gives us all git commands
+git help - a;;
+```
+
+## Gitignore files 
+- In Git, the .gitignore file tells Git which files or directories to ignore when tracking changes in a project.
+
+
+ 
 ### Created By: @RiyaDevelops
 
  
