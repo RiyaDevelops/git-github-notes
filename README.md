@@ -92,14 +92,17 @@ Understanding Git, version control, and Github broken down.
 ### 7. Create a Project to work in 
     - If you already created a folder to work in for your prject then naviagte it to it using the terminal. 
    
-    ```bash
-    # make a new directory if you have not created a folder 
+    ```
+     #make a new directory if you have not created a folder 
+
     mkdir your_folder_name
+  ```
 
     # change directory 
     cd your_folder_name
     ```
 ### 8. Initilize Git
+
 ```bash
 git init  
 ```
@@ -214,9 +217,14 @@ git help - a;;
 - Name Repository 
 - Decide to make public or private 
 - Add READ.ME file or .gitignore file if one is not created already
--Push our local Repo to Github 
+- Push ```git push``` our local Repo to Github 
 
-
+## How do we go from Github to Git 
+- We are going to click on code 
+- Clone the project
+- Copy HTTPS link 
+- Type ```git clone```then paste link 
+  - make sure your repository is in the correct directory 
  
 ### Created By: @RiyaDevelops
 
