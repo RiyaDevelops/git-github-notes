@@ -209,10 +209,12 @@ git help - a;;
 
 
 # Github 
+- Create Login 
 - Create Repository 
 - Name Repository 
 - Decide to make public or private 
 - Add READ.ME file or .gitignore file if one is not created already
+-Push our local Repo to Github 
 
 
  
