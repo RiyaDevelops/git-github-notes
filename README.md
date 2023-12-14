@@ -9,6 +9,7 @@ Understanding Git, version control, and Github broken down.
 - [What does Git do ?](#what-does-git-do)
 - [How Git works](#what-does-git-do)
 - [Getting Started with Git (for mac users)](#getting-started-with-git-for-mac-users)
+- [Github Basics](#github)
     
 
 ## What is Git ?
@@ -38,18 +39,18 @@ Understanding Git, version control, and Github broken down.
   - Commit can be seen as snapshots in time. *Individual changes to  files, that allows us to see what changes were made when and by who. Always have a message when make a commit. 
 
 ## Getting Started with Git for Mac users 
-1.  ###  Download and Install Git from [git-scm](https://git-scm.com/download/mac)
-2.   ### Under Binary Installer click on [installer](https://sourceforge.net/projects/git-osx-installer/)
-3.   ### Then click on Download 
-4.   ### Open file after downlaoding
+### 1. Download and Install Git from [git-scm](https://git-scm.com/download/mac)
+### 2.   Under Binary Installer click on [installer](https://sourceforge.net/projects/git-osx-installer/)
+### 3.  Then click on Download 
+### 4.   Open file after downlaoding
      - **For mac users Message on the screen will say git was blocked**
      - Watch [Youtube video](https://www.youtube.com/watch?v=O3vtpZgI0fQ) to see how to unblock git and use gitBash on the terminal 
-5. ###  Check your version of Git on your machine
+### 5. Check your version of Git on your machine
  ```bash
     git --version   
 ```
 
-6. ### Let Git know your name and email 
+### 6. Let Git know your name and email 
      - Create an account on [Github](www/github.com)
      - In your terminal configure your name and email so Git knows which name and email to associate with that commit.
         - **In other words you are telling Git who you are**
@@ -88,7 +89,7 @@ Understanding Git, version control, and Github broken down.
 
         -  Working on projects across various teams or organizations might require different identities
    
-7. ### Create a Project to work in 
+### 7. Create a Project to work in 
     - If you already created a folder to work in for your prject then naviagte it to it using the terminal. 
    
     ```bash
@@ -98,7 +99,7 @@ Understanding Git, version control, and Github broken down.
     # change directory 
     cd your_folder_name
     ```
-8. ### Initilize Git
+### 8. Initilize Git
 ```bash
 git init  
 ```
@@ -112,7 +113,7 @@ git init
 - In search Settings type Exclude to find the default Exlcude list 
 - Edit ".git" extension to "```.git-s``` " from the list  -> this will allow the .git folder to be visible ad no longer hidden
 
-9. ### Open text editor and add some files
+### 9. Open text editor and add some files
 
 - There is a shorcut to open current working directory in visual studio code
 ```bash 
@@ -122,7 +123,7 @@ code .
  - Note: This command ```code .```  may not nork if the code command is not recognized or added to your system's PATH.
  - Use [Resource](https://docs.newrelic.com/docs/style-guide/writing-docs/writer-workflow/set-up-local/#:~:text=Press%20command%20%2B%20shift%20%2B%20p%20to,that%20file%20in%20VS%20Code.) to assist if you run into this issue 
     
-10. ### Working with Files !
+### 10. Working with Files
 ```bash
 #create a new file (you can create files inside integrated terminal in visual studio code, make sure you are working in the bash temrinal)
 
@@ -130,7 +131,7 @@ touch "file_name"
 # example touch index.html creates html file 
 ```
 
-11. ### Check Status of Repository
+### 11. Check Status of Repository
 
 ```bash
 #check status of git 
@@ -145,7 +146,7 @@ git status --short
     # M - Modified
     # D - Deleted files 
 ```
-12. ### Staging our Files
+ ### 12. Staging our Files
 
 ```bash
 #add our files to the staging enviorment
@@ -158,7 +159,7 @@ git add file_name
 
  git add -all
 ```
-#### Notes 
+#### Notes: 
  - **Untracked Files:**
     -  These are files that are present in your project directory but haven't been added to the Git repository.
      - Git doesn't recognize these files and doesn't track changes in them.
@@ -176,7 +177,7 @@ git add file_name
     - They're in the working directory and are marked as modified because they've been edited **but not staged for a commit.**
  
 
-13. ### Committing our fILES 
+ ### 13. ### Committing our Files 
 - moving from staging to commiting files
 - Adding commits keeps track of our progress and changes, as we work 
 - In Git each commit is seen as a snaphot of our project. We can use these snapshots to revert to earlier versions when we need to. 
@@ -202,8 +203,16 @@ git help
 git help - a;;
 ```
 
-## Gitignore files 
+## Gitignore Files 
 - In Git, the .gitignore file tells Git which files or directories to ignore when tracking changes in a project.
+
+
+
+# Github 
+- Create Repository 
+- Name Repository 
+- Decide to make public or private 
+- Add READ.ME file or .gitignore file if one is not created already
 
 
  
