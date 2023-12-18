@@ -66,29 +66,30 @@ Understanding Git, version control, and Github broken down.
     //replace "Your Name" with your actual name
 
     //keep the quotes 
-    ```
+
    
   - #### Use global to set the email to be the same for every repository 
     
-    ```bash
     git config --global user.email "your.email@example.com"
 
     //replace "Your.email@example.com" with your actual email
 
     //keep the quotes 
-    ```
+  
       - Setting a new username for a specific repository:
       - Remove the word ```--global``` if you want to change the name or email for a specific repository:
 
+   
     - #### New Name
-    ```
+    
     git config user.name "Your New Name"
     
-      - #### New Email
-    ```
+    
+    - #### New Email
+  
+
     git config user.email "your.new.email@example.com"
     
-  
      ### Why would you not use global ?
 
 
@@ -100,15 +101,15 @@ Understanding Git, version control, and Github broken down.
 ### 7. Create a Project to work in 
     - If you already created a folder to work in for your prject then naviagte it to it using the terminal. 
    
-    ```
-     #make a new directory if you have not created a folder 
+    # make a new directory if you have not created a folder 
 
     mkdir your_folder_name
   ```
 
     # change directory 
+
     cd your_folder_name
-    ```
+    
 ### 8. Initilize Git
 
 ```bash
@@ -203,10 +204,21 @@ git commit -am "message"
 13. ### Commit Log 
 
 ```bash
-#git log allows us to the lidt of all commitd made ina  respository (foldrer for project)
+#git log allows us to see all of the commits that were made in the project
 
-git log
-  ```
+git log 
+
+# see commits for that specific file 
+git log <file_name>
+
+#Git shows the commit history for the specified file, along with the differences (patch) for each commit. 
+git log - p <file_name>
+
+
+#command shows the revision and author information for each commit in a file
+git blame <file_name>
+
+```
 
 14. #### Getting Help 
 ```bash 
