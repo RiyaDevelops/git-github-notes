@@ -38,6 +38,9 @@ Understanding Git, version control, and Github broken down.
 - **Commit** files after each change 
   - Commit can be seen as snapshots in time. *Individual changes to  files, that allows us to see what changes were made when and by who. Always have a message when make a commit. 
 
+  - WORKING DIRECTORY (Project) -----> STAGING AREA(index) -----> COMMITTED CHANGES 
+      - **staging area in Git is stored locally on your machine.**
+      - **committed changes are officcially saved to repositories history**
 ## Getting Started with Git for Mac users 
 ### 1. Download and Install Git from [git-scm](https://git-scm.com/download/mac)
 ### 2.   Under Binary Installer click on [installer](https://sourceforge.net/projects/git-osx-installer/)
@@ -46,7 +49,8 @@ Understanding Git, version control, and Github broken down.
      - **For mac users Message on the screen will say git was blocked**
      - Watch [Youtube video](https://www.youtube.com/watch?v=O3vtpZgI0fQ) to see how to unblock git and use gitBash on the terminal 
 ### 5. Check your version of Git on your machine
- ```bash
+
+ ```
     git --version   
 ```
 
@@ -55,15 +59,17 @@ Understanding Git, version control, and Github broken down.
      - In your terminal configure your name and email so Git knows which name and email to associate with that commit.
         - **In other words you are telling Git who you are**
 
-    - #### Use global to set the name to be the same for every repository 
-    ```bash
+  - #### Use global to set the name to be the same for every repository 
+   ```bash
     git config --global user.name "Your Name"
 
     //replace "Your Name" with your actual name
 
     //keep the quotes 
     ```
-     - #### Use global to set the email to be the same for every repository 
+   
+  - #### Use global to set the email to be the same for every repository 
+    
     ```bash
     git config --global user.email "your.email@example.com"
 
@@ -72,18 +78,20 @@ Understanding Git, version control, and Github broken down.
     //keep the quotes 
     ```
       - Setting a new username for a specific repository:
-        - Remove the word ```--global``` if you want to change the name or email for a specific repository:
+      - Remove the word ```--global``` if you want to change the name or email for a specific repository:
 
     - #### New Name
-    ```bash
-    git config user.name "Your New Name"
     ```
+    git config user.name "Your New Name"
+    
       - #### New Email
-    ```bash 
+    ```
     git config user.email "your.new.email@example.com"
-     ```
-
+    
+  
      ### Why would you not use global ?
+
+
       - #### Developers might want to omit the global setting, ```(--global)```, and configure specific settings for a particular repository due to a few reasons:
         - You might want your personal projects to use one identity while your work-related repositories use another. 
 
@@ -187,6 +195,9 @@ git add file_name
 
 ```bash
 git commit -m "message"
+
+git commit -am "message" 
+#add and commit at the same time
  ```
 
 13. ### Commit Log 
@@ -203,7 +214,10 @@ git log
 git help
 
 #gives us all git commands
-git help - a;;
+git help - a;
+
+# it shows you the differences between what's in your files right now and what Git knows about. 
+git diff 
 ```
 
 ## Gitignore Files 
