@@ -269,6 +269,8 @@ git diff
       or 
       # Switches to a different branch.
       git switch <branch_name>
+
+      #The git checkout command doesn't bring the changes from one branch to another directly. Instead, it switches your working directory and the state of your files to match the selected branch.
       ```
       
 # Github 
