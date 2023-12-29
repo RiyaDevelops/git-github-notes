@@ -10,6 +10,7 @@ Understanding Git, version control, and Github broken down.
 - [How Git works](#what-does-git-do)
 - [Getting Started with Git (for mac users)](#getting-started-with-git-for-mac-users)
 - [Github Basics](#github)
+- [Creating a Project](#developing-a-project)
     
 
 ## What is Git ?
@@ -235,8 +236,88 @@ git diff
 ## Gitignore Files 
 - In Git, the .gitignore file tells Git which files or directories to ignore when tracking changes in a project.
 
+# Developing a Project 
+ - When working on projects it is important to know how git works. Especially, when collaborating with other developers.
+
+ ### 1. Creating a Branch 
+  - Think of a **branch as an independent workspace where you can add, modify, and delete files without affecting the files in other branches.**
+ 
+  - It is reccomended not to work in the master/main branch. 
+      - The master or main branch often represents the stable, deployable version of your project for most companies. 
+      - Once your work is completed, tested, and reviewed, you merge it back into the master or main branch.
+      - ***Changes made in one branch don't affect other branches until explicitly merged.***
+
+      ![Branch Image ex:](img/branches_image.png)
+
+      ```bash 
+      #Lists all existing branches and highlights the current branch.
+
+      git branch
+      ```
+      ```bash
+      #Creates a new branch.
+      git branch <branch_name>
+      ```
+      ```bash 
+      #lists all the branches
+      git branch -av
+      ```
+      ```bash 
+      #swutching from one branch to another 
+      git checkout <branch_ngit aame> 
+      
+      or 
+      # Switches to a different branch.
+      git switch <branch_name>
+
+      #The git checkout command doesn't bring the changes from one branch to another directly. Instead, it switches your working directory and the state of your files to match the selected branch.
+      ```
+      ```bash 
+      #When combined, git checkout -b <branch_name> allows you to create a new branch and immediately switch to that branch.
+      
+      git checkout -b <branch_name>
+     ```  
+
+## Merging Branches and Solving Conflicts 
+- Dont want to merge different features into master branch
+- Always merge master into feature for the first time
+- If you merge festure into master and you have issues or bugs then it will go the master branch 
+- Rememeber master.main branch is the clean branch (THERE SHOULD BE NO BUGS IN MASTER)
+### How to merge barnches
+1. Switch to the branch you want to merge into (e.g., main):
+```bash 
+git checkout main
+```
+
+2. Merge the branch (e.g., feature) into the current branch (main):
+```bash 
+git merge feature
+```
 
 
+
+
+
+
+
+
+
+### Deleting a Branch
+  - **When you are deleting a brnah you can not currently be in that branch !!!!**
+```bash 
+#This command deletes the specified branch. If the branch has already been merged into the current branch, Git will delete it.
+
+git branch - d <branch_name> 
+```
+
+```bash
+#Forcibly deletes the specified branch, regardless of whether it has been merged or not. It's useful when you want to delete a branch regardless of its merge status.
+
+git branch -D branch_name
+```
+       
+    
+      
 # Github 
 - Create Login 
 - Create Repository 
