@@ -278,6 +278,20 @@ esc key : wq click enter
       #The git checkout command doesn't bring the changes from one branch to another directly. Instead, it switches your working directory and the state of your files to match the selected branch.
       ```
       
+    # Deleting a branch 
+      - There may be times when you want to delete a branch in your project 
+
+      ```bash
+       git branch -D branch_name
+
+      ```
+
+
+    # Merging Branches 
+
+
+
+    # Branch Conflicts 
 # Github 
 - Create Login 
 - Create Repository 
