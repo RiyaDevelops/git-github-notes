@@ -232,6 +232,11 @@ git help - a;
 # it shows you the differences between what's in your files right now and what Git knows about. 
 git diff 
 ```
+```bash
+esc key : wq click enter 
+#to escape anf get back to terminal
+
+```
 
 ## Gitignore Files 
 - In Git, the .gitignore file tells Git which files or directories to ignore when tracking changes in a project.
@@ -276,24 +281,68 @@ git diff
       #When combined, git checkout -b <branch_name> allows you to create a new branch and immediately switch to that branch.
       
       git checkout -b <branch_name>
-     ```  
+    ```
+      - Creating a New Branch: -b flag is used to create a new branch and switch to it in a single step.
+      
+      - Switching Branches: The checkout command is used to switch between branches in Git.
+      
 
 ## Merging Branches and Solving Conflicts 
-- Dont want to merge different features into master branch
-- Always merge master into feature for the first time
+- When multiple developers work on different branches or features simultaneously, merging allows these separate lines of development to come together
+
 - If you merge festure into master and you have issues or bugs then it will go the master branch 
-- Rememeber master.main branch is the clean branch (THERE SHOULD BE NO BUGS IN MASTER)
+
+- Rememeber master/main branch is the clean branch. Want it to be free of conflict. (THERE SHOULD BE NO BUGS IN MASTER)
+
+-Always merge master into your branch branch to reduce onflicts and chances of breaking website.
+
+
 ### How to merge barnches
 1. Switch to the branch you want to merge into (e.g., main):
 ```bash 
-git checkout main
+git checkout branch
 ```
 
-2. Merge the branch (e.g., feature) into the current branch (main):
+2. Merge the branch, after the word merge what ever branch you lister that this the brnach you are mergining into the other branch
+
 ```bash 
-git merge feature
+git merge branch
+
+#EX: git merge master ----- >you are currently in feature branch. you are merging the master branch into the feature branch
 ```
 
+# Merging Conglicts 
+
+- Sometimes you may run into something called "CONFLICT" ang get a message like this on the terminal: 
+
+```
+Ex: "CONFLICT (content): Merge conflict in index.html. Automatic merge failed; fix conflicts and then commit the result."
+```
+
+- *** A merge conflict exists when Git cannot automatically merge changes from different branches into a single commit because these changes conflict with each other. ***
+
+- A merge conflict arises when Git is unable to determine which changes to keep because both branches have made modifications to the same part of the file.
+
+```bash 
+imagine two people trying to edit the same sentence in a wor document at the same time. 
+
+If both change different parts of the sentence, that's okay - Git can combine their changes. 
+
+But if they both try to change the same word or phrase, Git gets confused. 
+
+Ex: Lets say there is a group  project and two people chnage the first word of the sentence. Sam changes it to "First" and Dan chnages it to "Firstly",
+
+It doesn't know which change to prioritize, and that's a merge conflict. You have to step in to decide which version of the sentence to keep or how to combine their changes manually.
+```
+
+
+
+
+```bash
+<<<<<<< HEAD marks the beginning of the conflicting changes from the current branch.
+======= separates the conflicting changes.
+>>>>>>> incoming-branch marks the end of the conflicting changes from the incoming branch.
+```
 
 
 
@@ -307,6 +356,7 @@ git merge feature
 ```bash 
 #This command deletes the specified branch. If the branch has already been merged into the current branch, Git will delete it.
 
+#brnach has to be merged first to use this command
 git branch - d <branch_name> 
 ```
 
