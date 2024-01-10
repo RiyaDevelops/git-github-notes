@@ -10,7 +10,7 @@ Understanding Git, version control, and Github broken down.
 - [How Git works](#what-does-git-do)
 - [Getting Started with Git (for mac users)](#getting-started-with-git-for-mac-users)
 - [Github Basics](#github)
-- [Creating a Project](#developing-a-project)
+- [Creating a Project](#working-on-a-team-as-a-developer)
     
 
 ## What is Git ?
@@ -241,8 +241,43 @@ esc key : wq click enter
 ## Gitignore Files 
 - In Git, the .gitignore file tells Git which files or directories to ignore when tracking changes in a project.
 
+# Working on a Team as a Developer 
+ - When working on projects it is important to know how git works when collaborating with other developers.
 
+ ### 1. Creating a Branch 
+  - Think of a **branch as an independent workspace where you can add, modify, and delete files without affecting the files in other branches.**
+ 
+  - It is reccomended not to work in the master/main branch. 
+      - The master or main branch often represents the stable, deployable version of your project for most companies. 
+      - Once your work is completed, tested, and reviewed, you merge it back into the master or main branch.
+      - ***Changes made in one branch don't affect other branches until explicitly merged.***
 
+      ![Branch Image ex:](img/branches_image.png)
+
+      ```bash 
+      #Lists all existing branches and highlights the current branch.
+
+      git branch
+      ```
+      ```bash
+      #Creates a new branch.
+      git branch <branch_name>
+      ```
+      ```bash 
+      #lists all the branches
+      git branch -av
+      ```
+      ```bash 
+      #swutching from one branch to another 
+      git checkout <branch_name> 
+      
+      or 
+      # Switches to a different branch.
+      git switch <branch_name>
+
+      #The git checkout command doesn't bring the changes from one branch to another directly. Instead, it switches your working directory and the state of your files to match the selected branch.
+      ```
+      
 # Github 
 - Create Login 
 - Create Repository 
