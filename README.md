@@ -282,14 +282,36 @@ esc key : wq click enter
       - There may be times when you want to delete a branch in your project 
 
       ```bash
-       git branch -D branch_name
+      #Delete a Merged Branch: Use -d flag. This deletes the specified branch only if it has been fully merged into its upstream branch.
 
+       git branch -d branch_name
       ```
 
+      ```bash 
+      #Force Delete an Unmerged Branch: Use -D flag. This deletes the specified branch regardless of its merge status. Lead to permanent data loss if you delete an unmerged branch.
+      
+      git branch -D <branch_name>
+      ```
+
+      ```bash 
+      git checkout branch_name 
+      
+      then
+      
+      git branch -d branch_name
+
+      #Remember when you are deleting a branch you can not be inside the branch. use bash checkout command to swith branch. 
+      
+      ```
 
     # Merging Branches 
+      - Merging branches in Git means combining changes from one branch into another. 
 
+      - The master/main branxh shoukd never have bugs in it. It should be conflict free with no bugs
 
+      - It is better to merge the master branch into the feature branch in order to mittigate bugs and rwduce th chanced of breaking the code 
+
+      - 
 
     # Branch Conflicts 
 # Github 
