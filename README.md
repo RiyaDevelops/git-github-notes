@@ -307,13 +307,68 @@ esc key : wq click enter
     # Merging Branches 
       - Merging branches in Git means combining changes from one branch into another. 
 
-      - The master/main branxh shoukd never have bugs in it. It should be conflict free with no bugs
+      - The master/main branch shoukd never have bugs in it. It should be conflict free with no bugs
 
       - It is better to merge the master branch into the feature branch in order to mittigate bugs and rwduce th chanced of breaking the code 
 
-      - 
+    ```bash 
+    #the terminal coommand to megrge branches
+    git merge branch_name
+    ```
+     - Key Note: The branch you want to merge into you must be inside of it first
+          -Ex: If i am in the festure_branch and I want to merge what I have done into the **main** branch I need to checout to the **main** branch then 
+       
+        ```bash
+        # Fist I must switch to the main brnach 
+         git checkout main
+           then 
+           # I can run the merge command
+          
+        git merge feature_branch
+          
+          # Now I have merged the feature_branch into the main branch
+          ```
+     ### Viewing Merge History 
 
-    # Branch Conflicts 
+      ```bash 
+      ## View commit history with a graphical representation of branches and merges
+      git log --oneline --graph
+      ```
+
+    # Merge Branch Conflicts 
+     - Merge conflicts occur when Git is unable to automatically merge changes from different branches. This typically happens when changes have been made to the same part of a file in both branches being merged
+
+     - Real Life Scenario:
+      ```bash
+      Imagine you are working on a school writing group project and you and your partner, Sarah, are both ediiting the same word in a specfic pagraph. 
+
+      Ex: The dog went to the store 
+        - You edit the third word in this sentence to "ran"
+        - Sarah edits the third word in this sentence to "hurried". 
+      ```
+      ```
+        - Your Edit: "The dog ran to the store."
+        - Sarah's Edit: "The dog hurried to the store."
+
+       Both words "ran" and "hurried" can not exist at the same time as the third word in this sentence. This will cause a Conflict. 
+
+      As teammates you and Sarah will have to decide what will be the third word. As you both have made conflicting changes to the same part of the sentence, a merge conflict would arise. This is the same in git merge coflicts.   
+    ```
+
+ ### Merge Conflict Markers 
+  ```bash 
+    - The <<<<<<<, =======, and >>>>>>> markers are called conflict markers in Git. 
+    <<<<<<< HEAD: This marker indicates the beginning of the conflicting changes from the current branch (HEAD refers to the latest commit on the current branch).
+
+=======: This marker separates the conflicting changes from the current branch (HEAD) and the changes from the branch being merged.
+
+>>>>>>> BranchName: This marker indicates the end of the conflicting changes and specifies the branch from which the conflicting changes originate. In the example, BranchName is the name of the branch that you are merging into the current branch.
+```
+
+Code Example: 
+
+
+
 # Github 
 - Create Login 
 - Create Repository 
