@@ -398,7 +398,18 @@ esc key : wq click enter
 
 # How to Undo Changes 
 
+```bash 
+#undo changes made in branch
 
+git checkout -- file_name 
+#this will undo the changes that were done in the file. This command will replace the file in your working directory with the version from the last commit.
+```
+```bash 
+git reset --hard HEAD
+# this brings back everything that was there before changes were made in all files 
+
+#REMEMBER: discards all current changes in your project and sets it back to the last saved version (commit) on your branch, effectively undoing any modifications. Use this command carefully, as it permanently erases any uncommitted work.
+```
 # Github 
 - Create Login 
 - Create Repository 
