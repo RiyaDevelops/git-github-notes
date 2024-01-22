@@ -100,7 +100,7 @@ Understanding Git, version control, and Github broken down.
         -  Working on projects across various teams or organizations might require different identities
    
 ### 7. Create a Project to work in 
-    - If you already created a folder to work in for your prject then naviagte it to it using the terminal. 
+    - If you already created a folder to work in for your project then navigate it to it using the terminal. 
    
     # make a new directory if you have not created a folder 
 
@@ -111,12 +111,12 @@ Understanding Git, version control, and Github broken down.
 
     cd your_folder_name
     
-### 8. Initilize Git
+### 8. Initialize Git
 
 ```bash
 git init  
 ```
-- The git repsoitory is initialized. This will be an empy git repository
+- The git repository is initialized. This will be an empty git repository
 - Git creates a hidden folder  called ```.git``` to keep track of the changes
     
 
@@ -128,7 +128,7 @@ git init
 
 ### 9. Open text editor and add some files
 
-- There is a shorcut to open current working directory in visual studio code
+- There is a shortcut to open current working directory in visual studio code
 ```bash 
 #this command will open visual studio code from the terminal
 code . 
@@ -162,7 +162,7 @@ git status --short
  ### 12. Staging our Files
 
 ```bash
-#add our files to the staging enviorment
+#add our files to the staging environment
 git add file_name
 
 #or add multiple files at once 
@@ -247,7 +247,7 @@ esc key : wq click enter
  ### 1. Creating a Branch 
   - Think of a **branch as an independent workspace where you can add, modify, and delete files without affecting the files in other branches.**
  
-  - It is reccomended not to work in the master/main branch. 
+  - It is recommended not to work in the master/main branch. 
       - The master or main branch often represents the stable, deployable version of your project for most companies. 
       - Once your work is completed, tested, and reviewed, you merge it back into the master or main branch.
       - ***Changes made in one branch don't affect other branches until explicitly merged.***
@@ -259,16 +259,20 @@ esc key : wq click enter
 
       git branch
       ```
+
       ```bash
       #Creates a new branch.
       git branch <branch_name>
       ```
+
       ```bash 
       #lists all the branches
       git branch -av
       ```
+
       ```bash 
-      #swutching from one branch to another 
+      #switching from one branch to another 
+      
       git checkout <branch_name> 
       
       or 
@@ -307,19 +311,25 @@ esc key : wq click enter
     # Merging Branches 
       - Merging branches in Git means combining changes from one branch into another. 
 
-      - The master/main branch shoukd never have bugs in it. It should be conflict free with no bugs
+      - ## The master/main branch should never have bugs in it. It should be conflict free with no bugs
 
-      - It is better to merge the master branch into the feature branch in order to mittigate bugs and rwduce th chanced of breaking the code 
+      - It is better to merge the master branch into the feature branch in order to mitigate bugs and reduce th chance of breaking the code. 
+
+      - Then when it is free of conflicts you can merge a feature branch into the master  
+
 
     ```bash 
-    #the terminal coommand to megrge branches
+    #the terminal command to merge branches
+
     git merge branch_name
     ```
      - Key Note: The branch you want to merge into you must be inside of it first
-          -Ex: If i am in the festure_branch and I want to merge what I have done into the **main** branch I need to checout to the **main** branch then 
+          
+        -Ex: If I am in the feature_branch and I want to merge into the **main** branch I need to checkout to the **main** branch 
        
         ```bash
-        # Fist I must switch to the main brnach 
+        # Fist I must switch to the main branch 
+
          git checkout main
            then 
            # I can run the merge command
@@ -340,19 +350,19 @@ esc key : wq click enter
 
      - Real Life Scenario:
       ```bash
-      Imagine you are working on a school writing group project and you and your partner, Sarah, are both ediiting the same word in a specfic pagraph. 
+      Imagine you are working on a school writing group project and you and your partner, Sarah, are both editing the same word in a specific paragraph. 
 
       Ex: The dog went to the store 
         - You edit the third word in this sentence to "ran"
         - Sarah edits the third word in this sentence to "hurried". 
       ```
-      ```
+      ```bash
         - Your Edit: "The dog ran to the store."
         - Sarah's Edit: "The dog hurried to the store."
 
        Both words "ran" and "hurried" can not exist at the same time as the third word in this sentence. This will cause a Conflict. 
 
-      As teammates you and Sarah will have to decide what will be the third word. As you both have made conflicting changes to the same part of the sentence, a merge conflict would arise. This is the same in git merge coflicts.   
+      As teammates you and Sarah will have to decide what will be the third word. As you both have made conflicting changes to the same part of the sentence, a merge conflict would arise. This is the same in git merge conflicts.   
     ```
 
  ### Merge Conflict Markers 
@@ -365,8 +375,28 @@ esc key : wq click enter
 >>>>>>> BranchName: This marker indicates the end of the conflicting changes and specifies the branch from which the conflicting changes originate. In the example, BranchName is the name of the branch that you are merging into the current branch.
 ```
 
-Code Example: 
+## CODE EXAMPLE:
+ - master branch, side bar branch
 
+ ```bash
+<<<<<<< HEAD
+    <aside>
+        <h2>helllo this is the sidebar</h2>
+        <footer>copyrights shariya george</footer>
+    </aside>
+=======
+    <ol>
+        <li>one </li>
+        <li>two </li>
+        <li>three </li>
+    </ol>
+>>>>>>> master
+
+# everything that is after (=====) this is code coming from the master branch 
+```
+- Key Note: You will decide what section of code you wan to be deleted from what branch ot to merge both
+
+# How to Undo Changes 
 
 
 # Github 
