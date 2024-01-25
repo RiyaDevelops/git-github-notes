@@ -404,12 +404,55 @@ esc key : wq click enter
 git checkout -- file_name 
 #this will undo the changes that were done in the file. This command will replace the file in your working directory with the version from the last commit.
 ```
+
 ```bash 
 git reset --hard HEAD
-# this brings back everything that was there before changes were made in all files 
 
-#REMEMBER: discards all current changes in your project and sets it back to the last saved version (commit) on your branch, effectively undoing any modifications. Use this command carefully, as it permanently erases any uncommitted work.
+# Undo all the changes between HEAD and the commit and discard ALL THE CHANGES !!
+
+# In Git, HEAD is a special pointer or reference that points to the latest commit in the branch you are currently on
+
+#REMEMBER:
+-  This will get rid of all current changes in your project and sets it back to the last saved version (commit) on your branch. 
+-  Use this command carefully, IT  WILL permanently erases any uncommitted work.
 ```
+## Go back in Time with Git reset 
+  - if you think that you lost your project or lost your work you can go back in time with git 
+    
+    ``` bash 
+    git reset --hard (specified commit)
+    
+    #this will do the same thing only difference is with this command you have to specify what commit you want it to reset to 
+
+    #the HEAD will now be at the commit has you placed as your specified commit 
+    ```
+ 
+  
+  ```bash
+    EX:  git reset --hard ASKDJFH3J40403003
+  
+    #This command resets your branch to the commit with the hash ASKDJFH3J40403003
+
+    #When you perform a git reset --hard to a specific commit, it resets your branch to that commit, and any commits that came after that commit will be removed.
+
+    #The commits are listed in reverse chronological order, with the most recent commit at the top.
+   
+   ```
+
+### Git Revert 
+
+```bash 
+ git revert (commit hash)
+```
+  - Git revert is a selective undo button 
+
+  - Allows you to undo specific changes introduced by a commit without discarding the entire commit or rewriting history. 
+
+  - This can be especially useful when you want to maintain a clean and transparent history, particularly in collaborative environments.
+  
+
+  
+
 # Github 
 - Create Login 
 - Create Repository 
