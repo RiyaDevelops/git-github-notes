@@ -9,8 +9,10 @@ Understanding Git, version control, and Github broken down.
 - [What does Git do ?](#what-does-git-do)
 - [How Git works](#what-does-git-do)
 - [Getting Started with Git (for mac users)](#getting-started-with-git-for-mac-users)
-- [Github Basics](#github)
 - [Creating a Project](#working-on-a-team-as-a-developer)
+- [Undoing Changes](#how-to-undo-changes)
+- [Github Basics](#github)
+
     
 
 ## What is Git ?
@@ -21,7 +23,7 @@ Understanding Git, version control, and Github broken down.
     - Who made the change ?
     - What changes were made ?
     - When the changes were made ?
-- It is also used for **collaborating**. Git allows multiple developers to coordinate work on a project simutaneously. 
+- It is also used for **collaborating**. Git allows multiple developers to coordinate work on a project simultaneously. 
 
 ## What does Git do ?
 - Git **manages** source code 
@@ -29,7 +31,7 @@ Understanding Git, version control, and Github broken down.
     - How is the source code managed ?
     - It is managed through **Repositories**.
       - A git repository is the .git/ folder inside a project. This folder is hidden. 
-      - The git repsoitory tracks all the changes ever made to files in your project.
+      - The git repository tracks all the changes ever made to files in your project.
        - *If you delete the .git/ folder then you delete your projects history*
 - **Clone** a project to work on a local copy 
 - Control & track changes with **Staging** & **Committing**
@@ -123,7 +125,7 @@ git init
 
     #### Bonus: How to show the folder in vs code 
 - Click on settings
-- In search Settings type Exclude to find the default Exlcude list 
+- In search Settings type Exclude to find the default Exclude list 
 - Edit ".git" extension to "```.git-s``` " from the list  -> this will allow the .git folder to be visible ad no longer hidden
 
 ### 9. Open text editor and add some files
@@ -133,12 +135,12 @@ git init
 #this command will open visual studio code from the terminal
 code . 
 ```
- - Note: This command ```code .```  may not nork if the code command is not recognized or added to your system's PATH.
+ - Note: This command ```code .```  may not work if the code command is not recognized or added to your system's PATH.
  - Use [Resource](https://docs.newrelic.com/docs/style-guide/writing-docs/writer-workflow/set-up-local/#:~:text=Press%20command%20%2B%20shift%20%2B%20p%20to,that%20file%20in%20VS%20Code.) to assist if you run into this issue 
     
 ### 10. Working with Files
 ```bash
-#create a new file (you can create files inside integrated terminal in visual studio code, make sure you are working in the bash temrinal)
+#create a new file (you can create files inside integrated terminal in visual studio code, make sure you are working in the bash terminal)
 
 touch "file_name" 
 # example touch index.html creates html file 
@@ -191,9 +193,9 @@ git add file_name
  
 
  ### 13. ### Committing our Files 
-- moving from staging to commiting files
+- moving from staging to committing files
 - Adding commits keeps track of our progress and changes, as we work 
-- In Git each commit is seen as a snaphot of our project. We can use these snapshots to revert to earlier versions when we need to. 
+- In Git each commit is seen as a snapshot of our project. We can use these snapshots to revert to earlier versions when we need to. 
 
 ```bash
 git commit -m "message"
@@ -304,7 +306,7 @@ esc key : wq click enter
       
       git branch -d branch_name
 
-      #Remember when you are deleting a branch you can not be inside the branch. use bash checkout command to swith branch. 
+      #Remember when you are deleting a branch you can not be inside the branch. use bash checkout command to switch branch. 
       
       ```
 
@@ -396,6 +398,7 @@ esc key : wq click enter
 ```
 - Key Note: You will decide what section of code you wan to be deleted from what branch ot to merge both
 
+
 # How to Undo Changes 
 
 ```bash 
@@ -416,8 +419,8 @@ git reset --hard HEAD
 -  This will get rid of all current changes in your project and sets it back to the last saved version (commit) on your branch. 
 -  Use this command carefully, IT  WILL permanently erases any uncommitted work.
 ```
-## Go back in Time with Git reset 
-  - if you think that you lost your project or lost your work you can go back in time with git 
+## Go back in Time with Git reset - 
+- If you think that you lost your project or lost your work you can go back in time with git 
     
     ``` bash 
     git reset --hard (specified commit)
@@ -427,9 +430,8 @@ git reset --hard HEAD
     #the HEAD will now be at the commit has you placed as your specified commit 
     ```
  
-  
   ```bash
-    EX:  git reset --hard ASKDJFH3J40403003
+     EX:  git reset --hard ASKDJFH3J40403003
   
     #This command resets your branch to the commit with the hash ASKDJFH3J40403003
 
@@ -442,7 +444,7 @@ git reset --hard HEAD
 ### Git Revert 
 
 ```bash 
- git revert (commit hash)
+ git revert (commit-hash)
 ```
   - Git revert is a selective undo button 
 
@@ -451,7 +453,6 @@ git reset --hard HEAD
   - This can be especially useful when you want to maintain a clean and transparent history, particularly in collaborative environments.
   
 
-  
 
 # Github 
 - Create Login 
