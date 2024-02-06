@@ -452,8 +452,7 @@ git reset --hard HEAD
 
   - This can be especially useful when you want to maintain a clean and transparent history, particularly in collaborative environments.
   
-
-
+  
 # Github 
 - Create Login 
 - Create Repository 
@@ -462,12 +461,72 @@ git reset --hard HEAD
 - Add READ.ME file or .gitignore file if one is not created already
 - Push ```git push``` our local Repo to Github 
 
-## How do we go from Github to Git 
+## How do we go from Github to Git
+ ### Cloning a Repository 
+ - The git clone command is used to create a copy of a remote Git repository on your local machine. 
+
 - We are going to click on code 
 - Clone the project
 - Copy HTTPS link 
 - Type ```git clone```then paste link 
-  - make sure your repository is in the correct directory 
+  - make sure your repository is in the correct directory/ folder that you want 
+
+  ```bash 
+   git clone link (folder_name)
+   ```
+  ## Pushing Code to Github 
+  - private or public repository is based on the nature of your project 
+
+  - You can add gitignore file manually 
+
+  - Click create repository 
+
+  ```bash 
+  - in the gitignore file we include anything you want to ignore 
+    
+  #In Git, the .gitignore file is used to specify intentionally untracked files and directories that Git should ignore.
+  example: 
+
+  # Ignore images folder
+    images/ 
+
+  #This rule tells Git to ignore the entire "images" directory and its contents.
+  
+   ```
+
+   ## Git remote, Git pull 
+  - Remote Repository: The repository hosted on GitHub's servers.
+
+ - Local Repository: The copy of the  repository on your local machine.
+
+    "origin" Remote: 
+- The default name given to the remote that points to the GitHub repository you cloned from.
+
+- Using the git remote command, you can manage this connection between your local repository and the GitHub repository, allowing you to collaborate with others and synchronize your work.
+
+```bash 
+ git remote add <name> <url>
+
+ ```
+
+ ### Git Pull 
+ - It's a combination of two other Git commands: git fetch and git merge.
+
+ - Imagine you have a folder on your computer where you're working on a project using Git. This folder is like your "local" workspace.
+
+- Now, let's say you're collaborating with others on this project, and they've made some changes to the project that you want to include in your version. These changes are stored in a "remote" location, like GitHub.
+
+- So, when you run git pull, it's like reaching out to that remote location (like GitHub), grabbing any new changes made by your collaborators, and bringing them into your local workspace. It's like updating your local version of the project to match the latest version that everyone's been working on.
+
+- ## In simple terms: git pull gets the latest updates from the remote location (like GitHub) and merges them into your local version of the project. It's a way to keep your project up-to-date with changes made by others.
+
+```bash 
+git pull origin <branch>
+
+#If you want to pull changes from the default branch (usually "main" or "master"), you can omit the <branch> part.
+```
+
+
  
 ### Created By: @RiyaDevelops
 
