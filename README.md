@@ -537,7 +537,7 @@ Add all your project files to the staging area.
 ```bash git add .
 Commit Your Changes:
 Commit the files with an appropriate commit message.
-``` 
+
 
 git commit -m "Initial commit"
 Add the Remote Repository:
@@ -551,7 +551,7 @@ Push your committed changes to GitHub. If this is the first push to a new reposi
 
 git push -u origin main
 Note: If your default branch is master instead of main, use master instead of main in the command above.
-
+``` 
 Authenticate:
 If prompted, enter your GitHub username and password or personal access token for authentication. GitHub has moved to using personal access tokens instead of passwords for Git operations.
 
