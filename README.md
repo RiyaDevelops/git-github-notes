@@ -534,23 +534,21 @@ Add Your Files to the Repository:
 Add all your project files to the staging area.
 
 
-git add .
+```bash git add .
 Commit Your Changes:
 Commit the files with an appropriate commit message.
-
+``` 
 
 git commit -m "Initial commit"
 Add the Remote Repository:
 Add the URL of your GitHub repository as a remote repository. Replace <username> with your GitHub username and <repository> with the name of your private repository.
 
-sh
-Copy code
+
 git remote add origin https://github.com/<username>/<repository>.git
 Push Your Changes:
 Push your committed changes to GitHub. If this is the first push to a new repository, you might need to set the upstream branch.
 
-sh
-Copy code
+
 git push -u origin main
 Note: If your default branch is master instead of main, use master instead of main in the command above.
 
